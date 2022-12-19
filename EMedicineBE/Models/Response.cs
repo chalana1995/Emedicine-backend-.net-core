@@ -15,6 +15,10 @@ namespace EMedicineBE.Models
 
         public Users user { get; set; }
 
+        public List<Medicines> listMedicine { get; set; }
+
+        public Medicines medicine { get; set; }
+
 
     }
 }
