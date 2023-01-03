@@ -18,7 +18,13 @@ namespace EMedicineBE.Models
         public List<Medicines> listMedicine { get; set; }
 
         public Medicines medicine { get; set; }
+        public List<Cart> listCart { get; set; }
 
+        public List<Orders> listOrders { get; set; }
+        public Orders order { get; set; }
+
+        public List<OrderItems> listOrderItems { get; set; }
+        public OrderItems orderItem { get; set; }
 
     }
 }
