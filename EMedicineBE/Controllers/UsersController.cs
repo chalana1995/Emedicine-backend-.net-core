@@ -32,5 +32,19 @@ namespace EMedicineBE.Controllers
 
             return response;
         }
+
+
+        [HttpPost]
+        [Route("login")]
+        public Response login(Users users)
+        {
+            DAL dal = new DAL();
+            Response response = new Response();
+            SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("").ToString());
+            response = dal.login(users, connection);
+
+            return response;
+
+        }
     }
 }
