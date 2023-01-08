@@ -26,7 +26,9 @@ namespace EMedicineBE.Controllers
         public Response register(Users users)
         {
             Response response = new Response();
+            DAL dal = new DAL();
             SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("EMedCS").ToString());
+            response = dal.register(users, connection);
 
             return response;
         }
